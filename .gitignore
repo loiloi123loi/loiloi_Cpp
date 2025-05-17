@@ -2,5 +2,3 @@ build/
 main.cpp
 src/template/io/inp.txt
 src/template/io/out.txt
-**/io/inp.txt
-**/io/out.txt

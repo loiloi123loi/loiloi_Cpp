@@ -9,6 +9,7 @@ typedef long long ll;
 #define INF INT_MAX
 #define INFF LLONG_MAX
 #define ll long long
+#define TIME (1.0 * clock())
 using namespace std;
 
 int main()
@@ -18,14 +19,15 @@ int main()
     freopen("template/io/out.txt", "w", stdout);
 #endif
 
-    ll a, b, sum = 0;
+    ll a, b, sum = 0, sum1 = 0;
     cin >> a >> b;
-    FOR(i, a + 1, b - 1)
-    {
-        if (i % 2 == 0 && i % 3 != 0)
-        {
-            sum += i;
-        }
-    }
-    cout << sum;
+    ++a;
+    --b;
+    ll start3 = a + (a % 6 == 0 ? 0 : 6 - a % 6);
+    ll end3 = b - b % 6;
+    sum -= (start3 + end3) / 2 * ((end3 - start3) / 6 + 1);
+    ll start2 = a + a % 2;
+    ll end2 = b - b % 2;
+    sum1 += (start2 + end2) / 2 * ((end2 - start2) / 2 + 1);
+    cout << sum + sum1 << el;
 }

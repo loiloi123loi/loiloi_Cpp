@@ -12,6 +12,7 @@ Cho hai số nguyên A và B, tính tổng tất cả các số nguyên i thỏa
 
 - Dòng đầu tiên chứa số nguyên A
 - Dòng thứ hai chứa số nguyên B
+- i <= A <= B <= 6\*10^9
 
 ## Output
 
